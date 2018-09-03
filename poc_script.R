@@ -13,21 +13,20 @@ data$ICD9.primary.procedure.code <- factor(data$ICD9.primary.procedure.code, lab
 
 data$Inpatient.days.code <- factor(data$Inpatient.days.code, labels = c(100,200,300), levels = c('2-3 days','8 or more days','1 day'))
 
-data$Beneficiary.Age.category.code <- factor(data$Beneficiary.Age.category.code, labels = c(10,20,30,40,20,10), levels = c('80 - 84','Under  65 ','65 - 69 ','85 & Older ','Under  65','80 - 84 '))
-data[7,5] <- 20
-data[10,5] <- 10
+data$Beneficiary.Age.category.code <- factor(data$Beneficiary.Age.category.code, labels = c(10,20,30,40), levels = c('80 - 84 ','Under  65 ','65 - 69 ','85 & Older'))
+
 
 #encoding test data
 test$Beneficiary.gender.code <- factor(test$Beneficiary.gender.code, labels = c(1,2), levels = c('female','male'))
 test$Base.DRG.code <- factor(test$Base.DRG.code, labels = c(10000,20000,30000,40000,50000,60000,70000,80000,90000), levels = c('Diabetes','Other digestive system O.R. procedures','Female reproductive system reconstructive procedures','G.I. hemorrhage',
                                                                                                                                'Alcohol/drug abuse or dependence w/o rehabilitation therapy','Psychoses','Rehabilitation','Permanent cardiac pacemaker implant','Traumatic stupor & coma'))
+
 test$ICD9.primary.procedure.code <- factor(test$ICD9.primary.procedure.code, labels = c(1000,2000,3000,4000,5000,6000,7000), levels = c('No procedure performed','Other abdomen region ops','Vagina & cul-de-sac ops','Intest incis/excis/anast','Psyche related procedure','Pt, rehab & related proc','Other heart/pericard ops'))
 
 test$Inpatient.days.code <- factor(test$Inpatient.days.code, labels = c(100,200,300), levels = c('2-3 days','8 or more days','1 day'))
 
-test$Beneficiary.Age.category.code <- factor(test$Beneficiary.Age.category.code, labels = c(10,20,30,40,20,10), levels = c('80 - 84','Under  65 ','65 - 69 ','85 & Older ','Under  65','80 - 84 '))
-test[7,5] <- 20
-test[10,5] <- 10
+test$Beneficiary.Age.category.code <- factor(test$Beneficiary.Age.category.code, labels = c(10,20,30,40), levels = c('80 - 84 ','Under  65 ','65 - 69 ','85 & Older'))
+
 
 #Model Building
 #Artificial neural networks
